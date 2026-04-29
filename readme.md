@@ -1,3 +1,6 @@
 UNTUK MENGGUNAKAN MEMAKE WEB INI ANDA HARUS MENJALANKAN npx @tailwindcss/cli -i ./assets/css/input.css -o ./public/dist/css/output.css --watch
 
 PASTIKAN TAILWIND, PHP TERINSTALL
+
+
+WEB INI MENGGUNAKAN KAYA MVC KAYA DI FRAMEWORK LARAVEL

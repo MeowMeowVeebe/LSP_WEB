@@ -117,7 +117,7 @@
 
                             <?php if ($is_auth && $_SESSION['user_id'] == $post['user_id']): ?>
                                 <div class="flex items-center gap-3">
-                                    <a class="text-sm text-slate-700 hover:text-slate-900" href="<?= BASE_URL ?>post/edit?id=<?= $post['id'] ?>"> <img class="object-fit-cover w-10 h-10" src="<?= ASSET_URL ?>images/edit.png" > </a>
+                                    <a class="text-sm text-slate-700 hover:text-slate-900" href="<?= BASE_URL ?>post/edit?id=<?= $post['id'] ?>"> <img class="object-fit-cover w-8 h-8" src="<?= ASSET_URL ?>images/edit.png" > </a>
                                     <form method="POST" action="<?= BASE_URL ?>posts/delete">
                                         <input type="hidden" name="post_id" value="<?= $post['id'] ?>">
                                         <button class="text-sm text-red-600 hover:text-red-700" type="submit"><img class="object-fit-cover w-10 h-10" src="<?= ASSET_URL ?>images/delete.png" ></button>
@@ -185,10 +185,10 @@
 
                                         <?php if ($is_auth && $_SESSION['user_id'] == $comment['user_id']): ?>
                                             <div class="flex items-center gap-3">
-                                                <a class="text-xs text-slate-700 hover:text-slate-900" href="<?= BASE_URL ?>home?edit_comment=<?= $comment['id'] ?>">Edit</a>
+                                                <a class="text-xs text-slate-700 hover:text-slate-900" href="<?= BASE_URL ?>home?edit_comment=<?= $comment['id'] ?>"><img class="object-fit-cover w-8 h-8" src="<?= ASSET_URL ?>images/edit.png" ></a>
                                                 <form method="POST" action="<?= BASE_URL ?>comments/delete">
                                                     <input type="hidden" name="comment_id" value="<?= $comment['id'] ?>">
-                                                    <button class="text-xs text-red-600 hover:text-red-700" type="submit">Hapus</button>
+                                                    <button class="text-xs text-red-600 hover:text-red-700" type="submit"><img class="object-fit-cover w-8 h-8" src="<?= ASSET_URL ?>images/delete.png" ></button>
                                                 </form>
                                             </div>
                                         <?php endif; ?>

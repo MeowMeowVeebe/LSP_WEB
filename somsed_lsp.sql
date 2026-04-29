@@ -50,6 +50,7 @@ CREATE TABLE comments (
 );
 
 
+--- Dummy users
 
 INSERT INTO users (username, password, bio, photo, photo_type) VALUES
 ('andi', '$2y$10$wH8yWlLxYz9Yj8m0y3o0kuv0qz6M6FqC7UqF5Ck9U0bFqQzYvT8bC', 'Belajar PHP native dan Tailwind CSS.', NULL, NULL),
@@ -62,6 +63,10 @@ INSERT INTO users (username, password, bio, photo, photo_type) VALUES
 ('hadi', '$2y$10$wH8yWlLxYz9Yj8m0y3o0kuv0qz6M6FqC7UqF5Ck9U0bFqQzYvT8bC', 'Belajar upload file di PHP.', NULL, NULL),
 ('intan', '$2y$10$wH8yWlLxYz9Yj8m0y3o0kuv0qz6M6FqC7UqF5Ck9U0bFqQzYvT8bC', 'Mencoba fitur komentar.', NULL, NULL),
 ('joko', '$2y$10$wH8yWlLxYz9Yj8m0y3o0kuv0qz6M6FqC7UqF5Ck9U0bFqQzYvT8bC', 'Database dan SQL enthusiast.', NULL, NULL);
+
+
+
+----- Dummy poist
 
 
 INSERT INTO posts (user_id, text, image, image_type, file, file_name, file_type) VALUES
@@ -82,6 +87,7 @@ INSERT INTO posts (user_id, text, image, image_type, file, file_name, file_type)
 (9, 'Router native PHP ternyata konsepnya mirip Laravel #router #php', NULL, NULL, NULL, NULL, NULL);
 
 
+----  seed comment
 INSERT INTO comments (post_id, user_id, text, image, image_type, file, file_name, file_type) VALUES
 (1, 2, 'Mantap, routing native memang penting #php', NULL, NULL, NULL, NULL, NULL),
 (1, 3, 'Aku juga lagi belajar ini #lsp', NULL, NULL, NULL, NULL, NULL),

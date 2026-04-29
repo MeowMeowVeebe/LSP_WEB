@@ -35,7 +35,7 @@ if (isset($routes[$requestMethod][$url])) {   //////-> JIKA VARIABEL ROUTE ADA B
     [$controllerName, $method] = $routes[$requestMethod][$url]; ///// ---> sebenarnya itu controllername dan method nya isi dari $URL
     $controllerName::$method(); //////--> MEMANGIL FUNGSI 
 } else {
-    Error_Controller::error();   ////-> KALAU MUNCUL 404 ERROR NOT FOUND
+    Error_Controller::error();   ////-> KALAU TIDAK MENENUMKAN URL YANG DITUJU MAKA MUNCUL INI
 }
 
 

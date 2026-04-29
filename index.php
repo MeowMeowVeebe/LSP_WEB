@@ -21,7 +21,7 @@ require_once ROOT_DIR . "/app/controller/CommentController.php";          //
 require_once ROOT_DIR . "/app/controller/PostController.php";           //
 require_once ROOT_DIR . "/app/controller/ErrorController.php";          //
 require_once ROOT_DIR . "/routes/web.php";                            //
-                                                                    // ----> UNTUK MEREFRENSI DATA YANG DI CONTROLLER SUPAYA BIAR CLASS, METHODNYA DIPANGGIL
+                                                                    // ----> UNTUK MEREFRENSI DATA YANG DI CONTROLLER SUPAYA BIAR CLASS, METHODNYA DIREFRENSI
 
 
 $url = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);    

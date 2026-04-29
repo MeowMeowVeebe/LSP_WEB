@@ -32,7 +32,7 @@ $url = $url === "" ? "/" : $url; ///// ---> Mengubah url kosong menjadi //
 $requestMethod = $_SERVER["REQUEST_METHOD"]; ////--> mengdekralasikan variabel
 
 if (isset($routes[$requestMethod][$url])) {   //////-> JIKA VARIABEL ROUTE ADA BERSERTALAM METHOD METHOD DAN CLASS FUNGSINYA
-    [$controllerName, $method] = $routes[$requestMethod][$url]; ///// ---> MENGASIH VARIABEL SEPERTI $controllername = $requestMethod
+    [$controllerName, $method] = $routes[$requestMethod][$url]; ///// ---> sebenarnya itu controllername dan method nya isi dari $URL
     $controllerName::$method(); //////--> MEMANGIL FUNGSI 
 } else {
     Error_Controller::error();   ////-> KALAU MUNCUL 404 ERROR NOT FOUND

@@ -70,12 +70,12 @@
             </div>
 
             <div class="space-y-4">
-                <?php $has_posts = false; ?> <!---    !---->
+                <?php $has_posts = false; ?> <!---    !--->
                 <?php while ($post = mysqli_fetch_assoc($posts)): ?> <!------ mengambil data column dari $post  !-->
-                    <?php $has_posts = true; ?>
+                    <?php $has_posts = true; ?>   <!------ mengdeklrasikan variabel $has_posts menjadi true !---->
                     <?php
-                    preg_match_all('/#([\p{L}\p{N}_]+)/u', $post['text'] ?? '', $hashtag_matches);
-                    $post_hashtags = array_values(array_unique($hashtag_matches[0] ?? []));
+                    preg_match_all('/#([\p{L}\p{N}_]+)/u', $post['text'] ?? '', $hashtag_matches);  /// Mengecek apakah di text itu ada hashtagnya 
+                    $post_hashtags = array_values(array_unique($hashtag_matches[0] ?? [])); //// mengambil daftar hashtag unik dari pencarian  hasil regex
                     ?>
                     <article class=" bg-white p-4">
                         <div class="mb-4 flex items-start justify-between gap-4">
@@ -259,7 +259,7 @@
                                     class="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-slate-500"
                                     type="text"
                                     name="text"
-                                    maxlength="250"
+                                    maxlength="250"F
                                     placeholder="Tulis komentar atau upload gambar/file...">
                                 <div class="grid gap-3 sm:grid-cols-2">
                                     <div>
@@ -283,7 +283,7 @@
                     </article>
                 <?php endwhile; ?>
 
-                <?php if (!$has_posts): ?>
+                <?php if (!$has_posts): ?> <!-----  Apakah !has_post itu false kalau iya maka akan tampilin dibawah ini!--->
                     <div class="rounded-lg border bg-white p-6 text-center">
                         <h3 class="text-lg font-semibold">Belum ada postingan</h3>
                         <p class="mt-2 text-sm text-slate-600">
